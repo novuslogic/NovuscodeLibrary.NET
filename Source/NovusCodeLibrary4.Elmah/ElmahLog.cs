@@ -7,7 +7,7 @@ using Elmah;
 
 namespace NovusCodeLibrary4.Elmah
 {
-    public static class ErrorLog
+    public static class ElmahLog
     {
         public static void LogMessage(string aMessage)
         {

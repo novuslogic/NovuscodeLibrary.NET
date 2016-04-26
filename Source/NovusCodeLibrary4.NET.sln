@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovusCodeLibrary4.Utils", "NovusCodeLibrary4.Utils\NovusCodeLibrary4.Utils.csproj", "{923D7F1E-96C4-4B62-A1DA-46F04226312A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovusCodeLibrary4.WebUtils", "NovusCodeLibrary4.WebUtils\NovusCodeLibrary4.WebUtils.csproj", "{A636197B-D551-4104-A675-86A3C7B702A4}"
@@ -8,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovusCodeLibrary4.SimpleTemplate", "NovusCodeLibrary4.SimpleTemplate\NovusCodeLibrary4.SimpleTemplate.csproj", "{C584334A-4491-4B33-99FB-E193A8010D1C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovusCodeLibrary4.Exceptions", "NovusCodeLibrary4.Exceptions\NovusCodeLibrary4.Exceptions.csproj", "{4B5E53C1-70A5-464D-BE0A-9ADFFEB5CDF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovusCodeLibrary4.Elmah", "NovusCodeLibrary4.Elmah\NovusCodeLibrary4.Elmah.csproj", "{43640C78-D35A-4668-B1D8-83B1C082D801}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{4B5E53C1-70A5-464D-BE0A-9ADFFEB5CDF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B5E53C1-70A5-464D-BE0A-9ADFFEB5CDF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B5E53C1-70A5-464D-BE0A-9ADFFEB5CDF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43640C78-D35A-4668-B1D8-83B1C082D801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43640C78-D35A-4668-B1D8-83B1C082D801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43640C78-D35A-4668-B1D8-83B1C082D801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43640C78-D35A-4668-B1D8-83B1C082D801}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

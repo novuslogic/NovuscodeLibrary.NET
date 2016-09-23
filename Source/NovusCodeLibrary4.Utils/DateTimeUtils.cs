@@ -8,6 +8,22 @@ namespace NovusCodeLibrary.Utils
     public class DateTimeUtils
     {
 
+
+        public static bool IsDateTimeEmpty(DateTime aDateTime)
+        {
+
+            bool fbOK = false;
+            
+            if (aDateTime == default(DateTime))
+            {
+                fbOK = true;
+            }
+
+
+            return fbOK;
+        }
+
+
         public static int DiffDays(DateTime aDateTime2, DateTime aDateTime1)
         {
             TimeSpan diff = aDateTime2 - aDateTime1;

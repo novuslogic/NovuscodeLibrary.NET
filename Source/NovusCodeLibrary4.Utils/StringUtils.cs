@@ -9,6 +9,12 @@ namespace NovusCodeLibrary.Utils
     public class StringUtils
     {
         
+        public static string CopyString(string aString)
+        {
+            if (string.IsNullOrEmpty(aString)) { aString = ""; }
+
+            return aString;
+        }
 
         public static Boolean IsNumeric(string aString)
         {

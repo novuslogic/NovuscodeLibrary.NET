@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Script;
 using System.Web.Mvc;
 
-namespace NovusCodeLibrary.WebUtils
+namespace NovusCodeLibrary4.JSONUtils
 {
     public class JSONExtUtils
     {

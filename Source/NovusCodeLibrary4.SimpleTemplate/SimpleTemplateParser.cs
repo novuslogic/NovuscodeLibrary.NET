@@ -39,7 +39,8 @@ namespace NovusCodeLibrary.SimpleTemplate
             Inputbuffer = "";
             Outputbuffer = "";
         }
-              
+             
+        
         
         public void AddTag(string aTagName)
         {
@@ -47,7 +48,7 @@ namespace NovusCodeLibrary.SimpleTemplate
         }
         
         
-        private string LoadFilenameInternal(string aFilename)
+        private string LoadFromFileInternal(string aFilename)
         {
          if (!File.Exists(aFilename)) 
                 { 
@@ -61,9 +62,9 @@ namespace NovusCodeLibrary.SimpleTemplate
             return lsstringbuffer;
         }
         
-        public void LoadFilename(string aFilename)
+        public void LoadFromFile(string aFilename)
         {
-            Inputbuffer = LoadFilenameInternal(aFilename);
+            Inputbuffer = LoadFromFileInternal(aFilename);
         }
 
         public void ParseInputbuffer()

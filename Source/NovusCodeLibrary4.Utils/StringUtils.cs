@@ -21,8 +21,7 @@ namespace NovusCodeLibrary.Utils
             int result;
             return int.TryParse(aString, out result);
         }
-
-
+    
         public static Boolean IsDateTime(string aString)
         {
             DateTime result;
@@ -99,7 +98,61 @@ namespace NovusCodeLibrary.Utils
         else { return 0; }
 
         }
-        
+
+        /// <summary>  
+        ///  Convert String to Double
+        /// </summary>  
+        public static double StrToDouble(string aString)
+        {
+
+            double fndouble = 0;
+
+
+            if (aString != null)
+            {
+
+                try
+                {
+                    fndouble = Convert.ToDouble(aString);
+                }
+                catch
+                {
+                    fndouble = 0;
+                }
+
+
+                return fndouble;
+            }
+            else { return 0; }
+
+        }
+
+
+        /// <summary>  
+        ///  Convert String to Datetime
+        /// </summary>  
+        public static DateTime StrToDateTime(string aString)
+        {
+            DateTime fdtDateTime = DateTime.MinValue; 
+            
+            if (aString != null)
+            {
+
+                try
+                {
+                    fdtDateTime = Convert.ToDateTime(aString);
+                }
+                catch
+                {
+                    fdtDateTime = DateTime.MinValue; 
+                }
+                                                
+            }
+
+            return fdtDateTime;
+        }
+
+
         public static Int64 StrToInt64(string aString)
         {
 

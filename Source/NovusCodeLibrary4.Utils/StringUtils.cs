@@ -201,9 +201,11 @@ namespace NovusCodeLibrary.Utils
             }
             else { return ""; }
         }
-        
-        
-        public static bool StringToBool(string aString)
+
+        /// <summary>  
+        ///  Convert String to Boolean
+        /// </summary>  
+        public static bool StrToBoolean(string aString)
         {
             bool Fbool = false;
             

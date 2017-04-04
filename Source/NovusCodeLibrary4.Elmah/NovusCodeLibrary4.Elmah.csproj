@@ -7,7 +7,7 @@
     <ProjectGuid>{43640C78-D35A-4668-B1D8-83B1C082D801}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NovusCodeLibrary4.Elmah</RootNamespace>
+    <RootNamespace>NovusCodeLibrary.Elmah</RootNamespace>
     <AssemblyName>NovusCodeLibrary4.Elmah</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

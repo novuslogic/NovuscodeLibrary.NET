@@ -28,7 +28,8 @@ namespace NovusCodeLibrary.SimpleTemplate
     
     public class SimpleTemplateParser
     {
-
+        public bool IgnoreBlankTags { get; set; } 
+        
         public Hashtable TemplateTags;
         private string matchpattern = @"(\<%\w+%\>)";
 
@@ -40,6 +41,7 @@ namespace NovusCodeLibrary.SimpleTemplate
             TemplateTags = new Hashtable();
             Inputbuffer = "";
             Outputbuffer = "";
+            IgnoreBlankTags = false;
         }
              
         
@@ -104,11 +106,25 @@ namespace NovusCodeLibrary.SimpleTemplate
         private string replacetaghandler(Match token)
         {
             string fsTagName = CleanTagName(token.Value);
-            
+
             if (TemplateTags.Contains(fsTagName))
-                return ((TemplateTag)TemplateTags[fsTagName]).TagValue;
+            {
+
+                if (IgnoreBlankTags == false)
+                { return ((TemplateTag)TemplateTags[fsTagName]).TagValue; }
+                else
+                {
+
+                    if (!string.IsNullOrEmpty(((TemplateTag)TemplateTags[fsTagName]).TagValue))
+                    { return ((TemplateTag)TemplateTags[fsTagName]).TagValue; }
+                    else { return ((TemplateTag)TemplateTags[fsTagName]).RawTagEx; }
+                }
+                
+            }
             else
+            {
                 return "";
+            }
         }
 
         

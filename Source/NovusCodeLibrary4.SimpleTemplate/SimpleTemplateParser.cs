@@ -14,11 +14,13 @@ namespace NovusCodeLibrary.SimpleTemplate
 
         public string TagName { get; set; }
         public string TagValue { get; set; }
-                
-        public TemplateTag(string aTagName, string aTagValue)
+        public string RawTagEx { get; set; }
+        
+        public TemplateTag(string aTagName, string aTagValue, string aRawTagEx)
         {
             TagName = aTagName;
             TagValue = aTagValue;
+            RawTagEx = aRawTagEx;
         }
     
     }
@@ -42,9 +44,9 @@ namespace NovusCodeLibrary.SimpleTemplate
              
         
         
-        public void AddTag(string aTagName)
+        public void AddTag(string aTagName, string aRawTagEx)
         {
-            TemplateTags.Add(aTagName, new TemplateTag(aTagName, string.Empty)); 
+            TemplateTags.Add(aTagName, new TemplateTag(aTagName, "", aRawTagEx)); 
         }
         
         
@@ -67,19 +69,46 @@ namespace NovusCodeLibrary.SimpleTemplate
             Inputbuffer = LoadFromFileInternal(aFilename);
         }
 
+        public string CleanTagName(string aRawTagEx)
+        {
+            string fsTagname = aRawTagEx;
+            fsTagname = fsTagname.Replace("<%", "");
+            fsTagname = fsTagname.Replace("%>", "");
+            
+            return fsTagname;
+        }
+
+        public void UpdateTagValue(string aTagName, string aTagValue )
+        {
+            if (TemplateTags.Contains(aTagName))
+            {
+
+                TemplateTag FTag = (TemplateTag)TemplateTags[aTagName];
+
+                FTag.TagValue = aTagValue;
+
+                ((TemplateTag)TemplateTags[aTagName]).TagValue = aTagValue;
+            }
+        }
+        
         public void ParseInputbuffer()
         {
             MatchCollection tagnames = Regex.Matches(Inputbuffer, matchpattern);
-            foreach (Match tagname in tagnames) AddTag(tagname.ToString());
+            foreach (Match tagname in tagnames)
+            {
+                AddTag(CleanTagName(tagname.ToString()), tagname.ToString());
+            }
         }
 
 
         private string replacetaghandler(Match token)
         {
-            if (TemplateTags.Contains(token.Value))
-                return ((TemplateTag)TemplateTags[token.Value]).TagValue;
+            string fsTagName = CleanTagName(token.Value);
+            
+            if (TemplateTags.Contains(fsTagName))
+                return ((TemplateTag)TemplateTags[fsTagName]).TagValue;
             else
-                return string.Empty;
+                return "";
         }
 
         

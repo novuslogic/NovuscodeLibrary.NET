@@ -23,6 +23,20 @@ namespace NovusCodeLibrary.Utils
             return fbOK;
         }
 
+        public static bool IsDateEmpty(DateTime aDate)
+        {
+
+            bool fbOK = false;
+                       
+            var ldtDate =aDate.Date;
+            
+            if (ldtDate == default(DateTime))
+            {
+                fbOK = true;
+            }
+
+            return fbOK;
+        }
 
         public static int DiffDays(DateTime aDateTime2, DateTime aDateTime1)
         {

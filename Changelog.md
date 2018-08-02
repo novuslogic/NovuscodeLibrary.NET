@@ -1,3 +1,10 @@
+02/08/2018
+
+NovusCodeLibrary4.Utils
+
+* New method CleanString(string aString) in class StringUtils
+
+
 19/06/2018
 
 NovusCodeLibrary4.Utils

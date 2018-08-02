@@ -8,7 +8,18 @@ namespace NovusCodeLibrary.Utils
 {
     public class StringUtils
     {
-        
+
+        public static string CleanString(string aString)
+        {
+            HashSet<char> removeChars = new HashSet<char>(" ?&^$#@!()+-,:;<>’\'-_*");
+            StringBuilder result = new StringBuilder(aString.Length);
+            foreach (char c in aString)
+                if (!removeChars.Contains(c))
+                    result.Append(c);
+            return result.ToString();
+        }
+
+
         public static string CopyString(string aString)
         {
             if (string.IsNullOrEmpty(aString)) { aString = ""; }
@@ -21,25 +32,25 @@ namespace NovusCodeLibrary.Utils
             int result;
             return int.TryParse(aString, out result);
         }
-    
+
         public static Boolean IsDateTime(string aString)
         {
             DateTime result;
             return DateTime.TryParse(aString, out result);
         }
 
-                      
+
         public static string CurrToStr(decimal aDecimal)
         {
-             return String.Format("{0:C}", aDecimal);
+            return String.Format("{0:C}", aDecimal);
         }
-        
+
         public static string IntToStr(int aInteger)
         {
-            return Convert.ToString(aInteger); 
+            return Convert.ToString(aInteger);
         }
-      
-        
+
+
         public static string Quotestring(string aString)
         {
             return SurroundWith(aString, "\"");
@@ -49,7 +60,7 @@ namespace NovusCodeLibrary.Utils
         {
             return aString.Replace("\r\n", "");
         }
-                
+
         static string RemoveQuotes(string aString)
         {
             return aString.Replace("\"", "");
@@ -76,26 +87,26 @@ namespace NovusCodeLibrary.Utils
 
         public static decimal StrToDecimal(string aString)
         {
-        
-        decimal fndecimal = 0;
+
+            decimal fndecimal = 0;
 
 
-        if (aString != null)
-        {
-
-            try
+            if (aString != null)
             {
-                fndecimal = Convert.ToDecimal(aString);
-            }
-            catch 
-            {
-                fndecimal = 0;
-            }
-                        
 
-            return fndecimal;
-        }
-        else { return 0; }
+                try
+                {
+                    fndecimal = Convert.ToDecimal(aString);
+                }
+                catch
+                {
+                    fndecimal = 0;
+                }
+
+
+                return fndecimal;
+            }
+            else { return 0; }
 
         }
 
@@ -133,8 +144,8 @@ namespace NovusCodeLibrary.Utils
         /// </summary>  
         public static DateTime StrToDateTime(string aString)
         {
-            DateTime fdtDateTime = DateTime.MinValue; 
-            
+            DateTime fdtDateTime = DateTime.MinValue;
+
             if (aString != null)
             {
 
@@ -144,9 +155,9 @@ namespace NovusCodeLibrary.Utils
                 }
                 catch
                 {
-                    fdtDateTime = DateTime.MinValue; 
+                    fdtDateTime = DateTime.MinValue;
                 }
-                                                
+
             }
 
             return fdtDateTime;
@@ -174,21 +185,26 @@ namespace NovusCodeLibrary.Utils
 
             // Minimum and Maximum Length of field - 6 to 12 Characters
             if (aPassword.Length < 6 || aPassword.Length > 12)
-                { result = false; }
-            else if (!Regex.IsMatch(aPassword, "[A-Z]")) {
-                result = false;
-            } else if (!Regex.IsMatch(aPassword, "[a-z]")) {
-                result = false;
-            } else if (! Regex.IsMatch(aPassword, @"[\d]")){
+            { result = false; }
+            else if (!Regex.IsMatch(aPassword, "[A-Z]"))
+            {
                 result = false;
             }
-            
+            else if (!Regex.IsMatch(aPassword, "[a-z]"))
+            {
+                result = false;
+            }
+            else if (!Regex.IsMatch(aPassword, @"[\d]"))
+            {
+                result = false;
+            }
+
             return result;
         }
 
 
-        
-        
+
+
         public static string Trim(string aString)
         {
 
@@ -208,7 +224,7 @@ namespace NovusCodeLibrary.Utils
         public static bool StrToBoolean(string aString)
         {
             bool Fbool = false;
-            
+
             try
             {
                 Fbool = Convert.ToBoolean(aString);
@@ -221,6 +237,6 @@ namespace NovusCodeLibrary.Utils
 
             return Fbool;
         }
-        
+
     }
 }

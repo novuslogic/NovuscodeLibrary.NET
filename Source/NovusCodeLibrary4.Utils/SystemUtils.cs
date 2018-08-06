@@ -13,7 +13,16 @@ namespace NovusCodeLibrary.Utils
             System.IO.Directory.CreateDirectory(aDirectory);
         }
 
-
+        public static byte[] GetBinaryFilename(string aFilename)
+        {
+            byte[] bytes;
+            using (FileStream file = new FileStream(aFilename, FileMode.Open, FileAccess.Read))
+            {
+                bytes = new byte[file.Length];
+                file.Read(bytes, 0, (int)file.Length);
+            }
+            return bytes;
+        }
 
         public static string TrailingBackSlash(string aPath)
         {

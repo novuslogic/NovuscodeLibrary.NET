@@ -1,3 +1,9 @@
+06/08/2018
+
+NovusCodeLibrary4.Utils
+
+* New method  byte[] GetBinaryFilename(string aFilename) in class SystemUtils
+
 02/08/2018
 
 NovusCodeLibrary4.Utils

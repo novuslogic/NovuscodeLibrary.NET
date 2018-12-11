@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Script;
-using System.Web.Mvc.FormCollection;
+//using System.Web.Mvc.FormCollection;
 
 
 namespace NovusCodeLibrary4.JSONUtils
 {
     public class JSONExtUtils
     {
-
+        /*
         public static string FormCollectionToJSON(FormCollection collection)
         {
             var list = new Dictionary<string, string>();
@@ -21,6 +21,6 @@ namespace NovusCodeLibrary4.JSONUtils
             }
             return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(list);
         }
-        
+        */
     }
 }

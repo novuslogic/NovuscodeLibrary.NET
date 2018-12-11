@@ -24,31 +24,83 @@ namespace NovusCodeLibrary.SimpleTemplate
         }
     
     }
-       
-    
+
+
     public class SimpleTemplateParser
     {
-        public bool IgnoreBlankTags { get; set; } 
-        
-        public Hashtable TemplateTags;
-        private string matchpattern = @"(\<%\w+%\>)";
+        public bool IgnoreBlankValue { get; set; }
 
+        private string fsStartToken = "<";
+        private string fsEndToken = ">";
+        private string fsSecondToken  ="%";
+
+
+        public Hashtable TemplateTags;
+        
+        private string fsMatchpattern = "";
+
+
+        public string StartToken
+        {
+            get { return fsStartToken; }
+            set { fsStartToken = value; }
+        }
+
+        public string EndToken
+        {
+            get { return fsEndToken; }
+            set { fsEndToken = value; }
+        }
+
+        public string SecondToken
+        {
+            get { return fsSecondToken; }
+            set { fsEndToken = value; }
+        }
+        
+        
         public string Inputbuffer {get;set;}
         public string Outputbuffer {get;set;}
 
+
+        public string Matchpattern
+        {
+            get
+            {
+
+                fsMatchpattern = @"(\";
+                fsMatchpattern = fsMatchpattern + fsStartToken + fsSecondToken;
+                fsMatchpattern = fsMatchpattern + @"\w+";
+                fsMatchpattern = fsMatchpattern + fsSecondToken + @"\";
+                fsMatchpattern = fsMatchpattern + fsEndToken + @")";
+
+                return fsMatchpattern;
+            }
+        }
+
+
+
+
+
         public SimpleTemplateParser()
         {
+            //fsMatchpattern = @"(\<%\w+%\>)";
+                                   
             TemplateTags = new Hashtable();
             Inputbuffer = "";
             Outputbuffer = "";
-            IgnoreBlankTags = false;
+            IgnoreBlankValue = false;
         }
              
         
         
         public void AddTag(string aTagName, string aRawTagEx)
         {
-            TemplateTags.Add(aTagName, new TemplateTag(aTagName, "", aRawTagEx)); 
+        
+            if (!TemplateTags.ContainsKey(aTagName))
+                { TemplateTags.Add(aTagName, new TemplateTag(aTagName, "", aRawTagEx)); }
+
+
         }
         
         
@@ -74,8 +126,9 @@ namespace NovusCodeLibrary.SimpleTemplate
         public string CleanTagName(string aRawTagEx)
         {
             string fsTagname = aRawTagEx;
-            fsTagname = fsTagname.Replace("<%", "");
-            fsTagname = fsTagname.Replace("%>", "");
+            fsTagname = fsTagname.Replace(fsStartToken + fsSecondToken, "");
+            fsTagname = fsTagname.Replace(fsSecondToken + fsEndToken, "");
+
             
             return fsTagname;
         }
@@ -95,7 +148,9 @@ namespace NovusCodeLibrary.SimpleTemplate
         
         public void ParseInputbuffer()
         {
-            MatchCollection tagnames = Regex.Matches(Inputbuffer, matchpattern);
+            TemplateTags.Clear();
+            
+            MatchCollection tagnames = Regex.Matches(Inputbuffer, Matchpattern);
             foreach (Match tagname in tagnames)
             {
                 AddTag(CleanTagName(tagname.ToString()), tagname.ToString());
@@ -110,7 +165,7 @@ namespace NovusCodeLibrary.SimpleTemplate
             if (TemplateTags.Contains(fsTagName))
             {
 
-                if (IgnoreBlankTags == false)
+                if (IgnoreBlankValue == false)
                 { return ((TemplateTag)TemplateTags[fsTagName]).TagValue; }
                 else
                 {
@@ -131,7 +186,7 @@ namespace NovusCodeLibrary.SimpleTemplate
         public void ParseOutputbuffer()
         {
             MatchEvaluator replacecallback = new MatchEvaluator(replacetaghandler);
-            Outputbuffer = Regex.Replace(Inputbuffer, matchpattern, replacecallback);
+            Outputbuffer = Regex.Replace(Inputbuffer, Matchpattern, replacecallback);
        
         }
                    

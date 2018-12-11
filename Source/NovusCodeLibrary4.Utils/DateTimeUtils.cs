@@ -18,12 +18,12 @@ namespace NovusCodeLibrary.Utils
             {
                 fbOK = true;
             }
-
+            
 
             return fbOK;
         }
 
-        public static bool IsDateEmpty(DateTime aDate)
+        public static bool IsDateEmpty(DateTime aDate, bool aIsDelphiDate = false)
         {
 
             bool fbOK = false;
@@ -35,6 +35,11 @@ namespace NovusCodeLibrary.Utils
                 fbOK = true;
             }
 
+            if (aIsDelphiDate)
+            {
+                if (aDate.Day == 30 & aDate.Month == 12 & aDate.Year == 1899) { fbOK = true; }
+            }
+            
             return fbOK;
         }
 

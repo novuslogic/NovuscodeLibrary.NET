@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Text;
+using System.IO;
 
 namespace NovusCodeLibrary.Utils
 {
@@ -39,6 +41,27 @@ namespace NovusCodeLibrary.Utils
             return DateTime.TryParse(aString, out result);
         }
 
+        public static string BytesToString(byte[] bytes)
+        {
+            using (var stream = new MemoryStream(bytes))
+            {
+                using (var streamReader = new StreamReader(stream))
+                {
+                    return streamReader.ReadToEnd();
+                }
+            }
+        }
+
+        public static string UTF8toASCII(string text)
+        {
+            System.Text.Encoding utf8 = System.Text.Encoding.UTF8;
+            Byte[] encodedBytes = utf8.GetBytes(text);
+            Byte[] convertedBytes =
+                    Encoding.Convert(Encoding.UTF8, Encoding.ASCII, encodedBytes);
+            System.Text.Encoding ascii = System.Text.Encoding.ASCII;
+
+            return ascii.GetString(convertedBytes);
+        }
 
         public static string CurrToStr(decimal aDecimal)
         {

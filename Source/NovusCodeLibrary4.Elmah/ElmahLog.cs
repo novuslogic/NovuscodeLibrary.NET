@@ -5,7 +5,7 @@ using System.Text;
 using System.Web;
 using Elmah;
 
-namespace NovusCodeLibrary4.Elmah
+namespace NovusCodeLibrary.Elmah
 {
     public static class ElmahLog
     {

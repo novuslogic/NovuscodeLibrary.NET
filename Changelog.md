@@ -1,3 +1,22 @@
+12/12/2018
+
+NovusCodeLibrary4.Elmah
+
+* Fixed namespace from NovusCodeLibrary4.Elmah to NovusCodeLibrary.Elmah
+
+
+NovusCodeLibrary4.SimpleTemplate
+
+* Rename property IgnoreBlankTags to IgnoreBlankValue
+* public void ParseInputbuffer() clears TemplateTags when called
+* Check key exists public void AddTag(string aTagName, string aRawTagEx)
+
+05/10/2018
+
+NovusCodeLibrary4.Utils
+
+new method string BytesToString(byte[] bytes) in class StringUtils
+
 06/08/2018
 
 NovusCodeLibrary4.Utils

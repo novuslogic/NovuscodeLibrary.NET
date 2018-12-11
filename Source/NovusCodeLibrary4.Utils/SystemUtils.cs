@@ -13,6 +13,35 @@ namespace NovusCodeLibrary.Utils
             System.IO.Directory.CreateDirectory(aDirectory);
         }
 
+
+        public static bool BinaryToFilename(string Filename, byte[] byteArray)
+        {
+            try
+            {
+                using (var fs = new FileStream(Filename, FileMode.Create, FileAccess.Write))
+                {
+                    fs.Write(byteArray, 0, byteArray.Length);
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception caught in process: {0}", ex);
+                return false;
+            }
+        }
+
+        public static byte[] GetBinaryMemoryStream(MemoryStream aStream)
+        {
+            aStream.Position = 0;
+
+            byte[] bytes = new byte[aStream.Length];
+            aStream.Read(bytes, 0, bytes.Length);
+
+            return bytes;
+        }
+
+
         public static byte[] GetBinaryFilename(string aFilename)
         {
             byte[] bytes;

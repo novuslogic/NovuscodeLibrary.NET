@@ -1,3 +1,9 @@
+30/04/2019
+
+NovusCodeLibrary.WebUtils
+
+* New method  public static string GetFullDomain(HttpRequest aRequest)
+
 12/12/2018
 
 NovusCodeLibrary4.Elmah

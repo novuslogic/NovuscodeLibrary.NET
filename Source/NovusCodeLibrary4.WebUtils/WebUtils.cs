@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.Web;
+using System.Web.Http;
+
 
 namespace NovusCodeLibrary.WebUtils
 {
     public class WebUtils
     {
-
         public static string FullHost(Uri aURI)
         {
             string lsFullhost = "";
@@ -47,6 +48,17 @@ namespace NovusCodeLibrary.WebUtils
             }
         }
         
+        public static string GetFullDomain(HttpRequest aRequest)
+        {
+
+            var httpRequestBase = new HttpRequestWrapper(aRequest);
+        
+            var uri = httpRequestBase?.UrlReferrer;
+            if (uri == null)
+                return string.Empty;
+            return uri.Scheme + Uri.SchemeDelimiter + uri.Authority;
+        
+        }
 
 
     }

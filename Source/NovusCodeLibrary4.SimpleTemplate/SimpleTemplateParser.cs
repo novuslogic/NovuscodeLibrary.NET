@@ -161,17 +161,18 @@ namespace NovusCodeLibrary.SimpleTemplate
         private string replacetaghandler(Match token)
         {
             string fsTagName = CleanTagName(token.Value);
-
+            string lsTagValue = "";
+            
             if (TemplateTags.Contains(fsTagName))
             {
-
+                lsTagValue = ((TemplateTag)TemplateTags[fsTagName]).TagValue;
+                
                 if (IgnoreBlankValue == false)
-                { return ((TemplateTag)TemplateTags[fsTagName]).TagValue; }
+                { return lsTagValue; }
                 else
                 {
-
-                    if (!string.IsNullOrEmpty(((TemplateTag)TemplateTags[fsTagName]).TagValue))
-                    { return ((TemplateTag)TemplateTags[fsTagName]).TagValue; }
+                    if (!string.IsNullOrEmpty(lsTagValue))
+                    { return lsTagValue; }
                     else { return ((TemplateTag)TemplateTags[fsTagName]).RawTagEx; }
                 }
                 

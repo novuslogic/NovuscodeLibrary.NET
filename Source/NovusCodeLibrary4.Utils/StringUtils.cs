@@ -31,8 +31,10 @@ namespace NovusCodeLibrary.Utils
 
         public static Boolean IsNumeric(string aString)
         {
-            int result;
-            return int.TryParse(aString, out result);
+            //int result;
+            //return int.TryParse(aString, out result);
+
+            return Regex.IsMatch(aString, @"^\d+$");
         }
 
         public static Boolean IsDateTime(string aString)

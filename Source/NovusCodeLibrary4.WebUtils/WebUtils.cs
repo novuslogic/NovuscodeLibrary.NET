@@ -26,7 +26,33 @@ namespace NovusCodeLibrary.WebUtils
             return lsFullhost;
         }
 
+        public static bool UrlsMatch(string aURI1, string aURI2, bool aJustPath = false)
+        {
+            if (aJustPath)
+            {
+                if (!aURI1.EndsWith("/"))
+                {
 
+                    aURI1 += "/";
+
+                }
+                if (!aURI2.EndsWith("/"))
+                {
+
+                    aURI2  += "/";
+
+                }
+
+            }
+
+
+            Uri uri1 = new Uri(aURI1.ToLower());
+            Uri uri2 = new Uri(aURI2.ToLower());
+
+            
+            return (uri1==uri2);
+        }
+       
 
         public static bool RemoteFileExists(string aURL)
         {

@@ -1,3 +1,9 @@
+22/08/2019
+
+* public static Boolean IsNumeric(string aString) now using Regex.IsMatch fixes Int32 size issue
+* public static bool UrlsMatch(string aURI1, string aURI2, bool aJustPath = false) new option for JustPath in URL
+
+
 30/04/2019
 
 NovusCodeLibrary.WebUtils

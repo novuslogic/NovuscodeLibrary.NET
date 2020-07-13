@@ -1,3 +1,8 @@
+17/07/2020
+
+* Fix reference issue with NovusCodeLibrary4.WebUtils with MVC4
+
+
 22/08/2019
 
 * public static Boolean IsNumeric(string aString) now using Regex.IsMatch fixes Int32 size issue

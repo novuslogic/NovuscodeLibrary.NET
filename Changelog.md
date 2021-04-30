@@ -1,3 +1,8 @@
+30/04/2021
+
+* Fixed Nughet package for NovusCodeLibrary.Elmah
+
+
 17/07/2020
 
 * Fix reference issue with NovusCodeLibrary4.WebUtils with MVC4

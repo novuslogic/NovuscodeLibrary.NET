@@ -1,3 +1,7 @@
+11/05/2021
+
+* Added public static Boolean IsAlphaNumeric(string aString)
+
 30/04/2021
 
 * Fixed Nughet package for NovusCodeLibrary.Elmah

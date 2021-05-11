@@ -29,6 +29,8 @@ namespace NovusCodeLibrary.Utils
             return aString;
         }
 
+
+
         public static Boolean IsNumeric(string aString)
         {
             //int result;
@@ -52,6 +54,14 @@ namespace NovusCodeLibrary.Utils
                     return streamReader.ReadToEnd();
                 }
             }
+        }
+
+        public static Boolean IsAlphaNumeric(string aString)
+        {
+            //int result;
+            //return int.TryParse(aString, out result);
+
+            return Regex.IsMatch(aString, @"[0-9A-Za-z]$");
         }
 
         public static string UTF8toASCII(string text)

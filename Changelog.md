@@ -1,3 +1,8 @@
+05/10/2021
+
+* new class AppVersionUtils in NovusCodeLibrary.Utils
+
+
 11/05/2021
 
 * Added public static Boolean IsAlphaNumeric(string aString)

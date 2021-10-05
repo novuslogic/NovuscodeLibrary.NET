@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppVersionUtils.cs" />
     <Compile Include="DataTableUtils.cs" />
     <Compile Include="DateTimeUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

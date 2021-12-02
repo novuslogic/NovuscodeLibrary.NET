@@ -272,6 +272,21 @@ namespace NovusCodeLibrary.Utils
 
             return Fbool;
         }
+        /// <summary>  
+        ///  Find text in string between two positions
+        /// </summary>  
+        public static string InBetween(string aString, string aStrartString, string aEndString)
+        {
+            if (aString.Contains(aStrartString) && aString.Contains(aEndString))
+            {
+                int Start, End;
+                Start = aString.IndexOf(aStrartString, 0) + aStrartString.Length;
+                End = aString.IndexOf(aEndString, Start);
+                return aString.Substring(Start, End - Start);
+            }
+
+            return "";
+        }
 
     }
 }

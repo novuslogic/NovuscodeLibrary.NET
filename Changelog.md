@@ -1,3 +1,7 @@
+2/12/2021
+
+* New public static string InBetween(string aString, string aStrartString, string aEndString)
+
 05/10/2021
 
 * new class AppVersionUtils in NovusCodeLibrary.Utils

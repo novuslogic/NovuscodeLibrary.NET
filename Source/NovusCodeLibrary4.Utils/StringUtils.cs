@@ -154,7 +154,7 @@ namespace NovusCodeLibrary.Utils
             double fndouble = 0;
 
 
-            if (aString != null)
+            if (!string.IsNullOrEmpty(aString))
             {
 
                 try
@@ -181,7 +181,7 @@ namespace NovusCodeLibrary.Utils
         {
             DateTime fdtDateTime = DateTime.MinValue;
 
-            if (aString != null)
+            if (!string.IsNullOrEmpty(aString))
             {
 
                 try
@@ -202,7 +202,7 @@ namespace NovusCodeLibrary.Utils
         public static Int64 StrToInt64(string aString)
         {
 
-            if (aString != null)
+            if (!string.IsNullOrEmpty(aString))
             {
                 var fnInt64 = Convert.ToInt64(aString);
 

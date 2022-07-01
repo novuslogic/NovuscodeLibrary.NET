@@ -1,3 +1,8 @@
+1/7/2022
+
+* public static string GetUserAddress(HttpRequest request)
+
+
 2/12/2021
 
 * New public static string InBetween(string aString, string aStrartString, string aEndString)
@@ -13,7 +18,7 @@
 
 30/04/2021
 
-* Fixed Nughet package for NovusCodeLibrary.Elmah
+* Fixed Nuget package for NovusCodeLibrary.Elmah
 
 
 17/07/2020

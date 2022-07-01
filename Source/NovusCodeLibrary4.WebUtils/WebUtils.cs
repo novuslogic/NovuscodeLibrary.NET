@@ -11,6 +11,17 @@ namespace NovusCodeLibrary.WebUtils
 {
     public class WebUtils
     {
+        public static string GetUserAddress(HttpRequest request)
+        {
+            string result = request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+            if (string.IsNullOrWhiteSpace(result))
+            {
+                result = request.UserHostAddress;
+
+            }
+            return result;
+        }
+
         public static string FullHost(Uri aURI)
         {
             string lsFullhost = "";

@@ -7,8 +7,6 @@ namespace NovusCodeLibrary.Utils
 {
     public class DateTimeUtils
     {
-
-
         public static bool IsDateTimeEmpty(DateTime aDateTime)
         {
 
@@ -28,7 +26,9 @@ namespace NovusCodeLibrary.Utils
 
             bool fbOK = false;
                        
+
             var ldtDate =aDate.Date;
+                       
             
             if (ldtDate == default(DateTime))
             {
@@ -71,6 +71,31 @@ namespace NovusCodeLibrary.Utils
             return years;
         }
 
-        
+        public static long DateTimeToUnixTime(DateTime aDateTime)
+        {
+            if (!IsDateEmpty(aDateTime))
+            {
+                var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+                return Convert.ToInt64((aDateTime.ToUniversalTime() - epoch).TotalSeconds);
+            }
+            else { return 0; }
+        }
+
+
+        public static DateTime UnixTimeToDateTime(long epoch)
+        {
+           return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(epoch);
+        }
+
+        public static string DateTimeToISO8601(DateTime aDateTime)
+        {
+           return aDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss zzz");
+        }
+
+        public static string DateTimeToyyyyMMdd(DateTime aDateTime)
+        {
+           return aDateTime.ToString("yyyy-MM-dd");
+        }
+
     }
 }

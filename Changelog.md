@@ -1,7 +1,11 @@
+8/2/2023
+
+* New  public static string RandomAlphaNumericString(int length)
+
+
 1/7/2022
 
-* public static string GetUserAddress(HttpRequest request)
-
+* New public static string GetUserAddress(HttpRequest request)
 
 2/12/2021
 

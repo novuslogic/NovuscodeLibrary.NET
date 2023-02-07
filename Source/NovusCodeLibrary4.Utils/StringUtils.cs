@@ -28,15 +28,9 @@ namespace NovusCodeLibrary.Utils
 
             return aString;
         }
-
-
-
         public static Boolean IsNumeric(string aString)
         {
-            //int result;
-            //return int.TryParse(aString, out result);
-
-            return Regex.IsMatch(aString, @"^\d+$");
+           return Regex.IsMatch(aString, @"^\d+$");
         }
 
         public static Boolean IsDateTime(string aString)
@@ -198,6 +192,16 @@ namespace NovusCodeLibrary.Utils
             return fdtDateTime;
         }
 
+
+
+        public static string RandomAlphaNumericString(int length)
+        {
+            Random random = new Random();
+
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
 
         public static Int64 StrToInt64(string aString)
         {

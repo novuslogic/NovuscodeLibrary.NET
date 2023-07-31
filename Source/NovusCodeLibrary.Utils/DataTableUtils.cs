@@ -6,8 +6,6 @@ using System.Reflection;
 using System.Reflection.Emit;
 using System.Data;
 using System.ComponentModel;
-using System.Data.Linq;
-using System.Data.Linq.Mapping;
 
 namespace NovusCodeLibrary.Utils
 {
@@ -134,6 +132,7 @@ namespace NovusCodeLibrary.Utils
             }
         }
         
+        /*
         public static List<T> ConvertTo<T>(DataTable datatable) where T : new()
         {
             List<T> Temp = new List<T>();
@@ -154,5 +153,6 @@ namespace NovusCodeLibrary.Utils
             }
 
         }
+        */
     }
 }

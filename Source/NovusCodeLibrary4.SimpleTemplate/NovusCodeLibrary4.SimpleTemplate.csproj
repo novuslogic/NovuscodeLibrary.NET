@@ -43,12 +43,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleTemplateParser.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NovusCodeLibrary4.Utils\NovusCodeLibrary4.Utils.csproj">
-      <Project>{923d7f1e-96c4-4b62-a1da-46f04226312a}</Project>
-      <Name>NovusCodeLibrary4.Utils</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

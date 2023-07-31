@@ -1,6 +1,22 @@
+# Changelog
+
+<!-- TOC -->
+
+- [Changelog](#changelog)
+    - [Release v0.1.0](#release-v010)
+
+<!-- /TOC -->
+
+## Release v0.1.0
+
+31/07/2023
+
+* Adjusted public static Boolean IsAlphaNumeric(string aString) 
+* Fixed Ignore file
+
 8/2/2023
 
-* New  public static string RandomAlphaNumericString(int length)
+* New public static string RandomAlphaNumericString(int length)
 
 
 1/7/2022

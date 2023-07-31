@@ -55,7 +55,8 @@ namespace NovusCodeLibrary.Utils
             //int result;
             //return int.TryParse(aString, out result);
 
-            return Regex.IsMatch(aString, @"[0-9A-Za-z]$");
+            //return Regex.IsMatch(aString, @"[0-9A-Za-z]$");
+            return Regex.IsMatch(aString, "^[a-zA-Z0-9]*$");
         }
 
         public static string UTF8toASCII(string text)

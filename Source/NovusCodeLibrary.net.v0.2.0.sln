@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovusCodeLibrary4.JSONUtils", "NovusCodeLibrary4.JSONUtils\NovusCodeLibrary4.JSONUtils.csproj", "{9F42D7F7-E069-41C1-BA02-B71BBAA4634E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovusCodeLibrary.Utils", "NovusCodeLibrary.Utils\NovusCodeLibrary.Utils.csproj", "{B869AC1F-8BAC-4CF6-8E37-307973E9D7F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovusCodeLibrary.WebUtils", "NovusCodeLibrary.WebUtils\NovusCodeLibrary.WebUtils.csproj", "{D7ADE768-876E-48F2-8279-8204BDE7FE9C}"
@@ -21,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9F42D7F7-E069-41C1-BA02-B71BBAA4634E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F42D7F7-E069-41C1-BA02-B71BBAA4634E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F42D7F7-E069-41C1-BA02-B71BBAA4634E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F42D7F7-E069-41C1-BA02-B71BBAA4634E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B869AC1F-8BAC-4CF6-8E37-307973E9D7F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B869AC1F-8BAC-4CF6-8E37-307973E9D7F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B869AC1F-8BAC-4CF6-8E37-307973E9D7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU

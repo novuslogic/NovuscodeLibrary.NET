@@ -10,6 +10,8 @@
 
 ## Release v0.2.0
 
+* Github Action to build dotnet
+* Moved to Newtonsoft.Json to 13.03
 * Removed NovusCodeLibrary4.JSONUtils
 * Renamed class RESTClient to RESTClientUtils
 * New Class Standard 2.0 Library NovusCodeLibrary.JSONUtils

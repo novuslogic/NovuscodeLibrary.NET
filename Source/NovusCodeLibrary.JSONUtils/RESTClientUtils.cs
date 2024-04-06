@@ -20,7 +20,9 @@ namespace NovusCodeLibrary.JSONUtils
             var req = HttpWebRequest.Create(uri);
             req.Method = method;
             req.ContentType = "application/json";
-            byte[] bytes = UTF8Encoding.UTF8.GetBytes(parms.ToString());
+            var bytestr = parms.ToString();
+
+            byte[] bytes = UTF8Encoding.UTF8.GetBytes(bytestr);
             req.ContentLength = bytes.Length;
 
             using (var stream = req.GetRequestStream())

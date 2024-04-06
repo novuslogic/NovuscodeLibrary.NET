@@ -10,6 +10,9 @@
 
 ## Release v0.2.0
 
+6/4/2024
+
+* Removed Dynamic from method public string RequestRESTCall(string uri, string method, string jsonParams)
 * Github Action to build dotnet
 * Moved to Newtonsoft.Json to 13.03
 * Removed NovusCodeLibrary4.JSONUtils

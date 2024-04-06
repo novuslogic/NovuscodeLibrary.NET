@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.Web;
-//using System.Web.Http;
 
 
 namespace NovusCodeLibrary.WebUtils
 {
     public class WebUtils
     {
+        /*
         public static string GetUserAddress(HttpRequest request)
         {
             string result = request.ServerVariables["HTTP_X_FORWARDED_FOR"];
@@ -21,6 +21,7 @@ namespace NovusCodeLibrary.WebUtils
             }
             return result;
         }
+        */
 
         public static string FullHost(Uri aURI)
         {
@@ -85,6 +86,7 @@ namespace NovusCodeLibrary.WebUtils
             }
         }
         
+        /*
         public static string GetFullDomain(HttpRequest aRequest)
         {
 
@@ -96,6 +98,7 @@ namespace NovusCodeLibrary.WebUtils
             return uri.Scheme + Uri.SchemeDelimiter + uri.Authority;
         
         }
+        */
 
 
     }

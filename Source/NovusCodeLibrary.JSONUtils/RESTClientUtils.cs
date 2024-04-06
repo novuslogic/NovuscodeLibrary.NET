@@ -8,9 +8,9 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 
 
-namespace NovusCodeLibrary.WebUtils
+namespace NovusCodeLibrary.JSONUtils
 {
-    public class RESTClient
+    public class RESTClientUtils
     {
 
         public dynamic RequestRESTCall(string uri, string method, dynamic parms)

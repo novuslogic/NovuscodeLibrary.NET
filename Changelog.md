@@ -3,9 +3,30 @@
 <!-- TOC -->
 
 - [Changelog](#changelog)
+    - [Release v0.2.0](#release-v020)
     - [Release v0.1.0](#release-v010)
 
 <!-- /TOC -->
+
+## Release v0.2.0
+
+* Removed NovusCodeLibrary4.JSONUtils
+* Renamed class RESTClient to RESTClientUtils
+* New Class Standard 2.0 Library NovusCodeLibrary.JSONUtils
+* Removed NovusCodeLibrary4.Exceptions
+* New Class Standard 2.0 Library NovusCodeLibrary.Exceptions
+* Removed NovusCodeLibrary4.WebUtils
+* Removed class WebConfigUtils 
+* Removed WebUtils public static string GetUserAddress(HttpRequest request)
+* Removed WebUtils public static string GetFullDomain(HttpRequest aRequest)
+* New Class Standard 2.0 Library NovusCodeLibrary.WebUtils
+* Removed class library NovusCodeLibrary4.Utils
+* Removed  DataTableUtils public static List<T> ConvertTo<T>(DataTable datatable) where T : new()
+* New Class Standard 2.0 Library NovusCodeLibrary.Utils
+* Removed class library NovusCodeLibrary4.Elmah
+* Renamed Visual Studio to NovusCodeLibrary.net.v0.2.0.sln
+* public static List<T> ConvertTo<T>(DataTable datatable) where T : new() 
+
 
 ## Release v0.1.0
 

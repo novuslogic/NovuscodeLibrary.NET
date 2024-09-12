@@ -22,10 +22,10 @@ jobs:
         dotnet-version: '3.1.x'  # .NET Core 3.1 SDK supports .NET Standard 2.0 and 2.1
 
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore NovuscodeLibrary.NET/Source/NovusCodeLibrary.sln
 
     - name: Build the project
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build NovuscodeLibrary.NET/Source/NovusCodeLibrary.sln --configuration Release --no-restore
 
     #- name: Run tests (optional)
-    #  run: dotnet test --configuration Release --no-build --verbosity normal
+    #  run: dotnet test NovuscodeLibrary.NET/Source/NovusCodeLibrary.sln --configuration Release --no-build --verbosity normal

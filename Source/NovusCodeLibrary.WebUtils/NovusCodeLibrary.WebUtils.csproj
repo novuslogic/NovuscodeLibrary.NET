@@ -6,6 +6,7 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/novuslogic/NovuscodeLibrary.NET</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

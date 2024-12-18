@@ -27,5 +27,12 @@ jobs:
     - name: Build the project
       run: dotnet build ./Source/NovusCodeLibrary.sln --configuration Release --no-restore
 
+
+    - name: Publish to NuGet
+      env:
+        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      run: |
+        dotnet pack ./Source/NovusCodeLibrary.sln --configuration Release --no-build --output ./nupkg
+      #  dotnet nuget push "./nupkg/*.nupkg" --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json     
     #- name: Run tests (optional)
     #  run: dotnet test NovuscodeLibrary.NET/Source/NovusCodeLibrary.sln --configuration Release --no-build --verbosity normal

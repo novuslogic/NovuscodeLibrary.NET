@@ -1,4 +1,4 @@
 NovuscodeLibrary.NET
 ====================
 
-Utilities Library for .NET 
+Helper Utilities Library for .NET 

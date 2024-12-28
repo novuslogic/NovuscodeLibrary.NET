@@ -5,6 +5,7 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Version>0.3.0</Version>
+    <PackageProjectUrl>https://github.com/novuslogic/NovuscodeLibrary.NET</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE">

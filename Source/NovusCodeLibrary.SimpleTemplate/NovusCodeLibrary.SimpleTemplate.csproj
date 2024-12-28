@@ -5,6 +5,7 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Version>0.3.0</Version>
+    <Description>Simple Template Functions</Description>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE">

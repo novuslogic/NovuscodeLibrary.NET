@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Version>0.3.0</Version>
+    <PackageProjectUrl>https://github.com/novuslogic/NovuscodeLibrary.NET</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE">

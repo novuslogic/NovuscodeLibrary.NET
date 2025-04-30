@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04 #ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
@@ -21,17 +21,7 @@ jobs:
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '3.1.x'  # .NET Core 3.1 SDK supports .NET Standard 2.0 and 2.1
-
-
-    - name: Install OpenSSL
-      run: |
-        wget https://www.openssl.org/source/openssl-1.1.1.tar.gz
-        tar -xzvf openssl-1.1.1.tar.gz
-        cd openssl-1.1.1
-        ./config
-        make
-        sudo make install
+        dotnet-version: '8.0.x'   #'3.1.x'  # .NET Core 3.1 SDK supports .NET Standard 2.0 and 2.1
 
     - name: Install dependencies
       run: dotnet restore ./Source/NovusCodeLibrary.sln

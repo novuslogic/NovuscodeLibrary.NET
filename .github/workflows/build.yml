@@ -15,10 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install OpenSSL 1.1
+    - name: Install OpenSSL 1.1 manually
       run: |
         sudo apt update
-        sudo apt install -y libssl1.1 || echo "libssl1.1 not found, ensure your dependencies support OpenSSL 3"
+        wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.1/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
+        sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
 
     - name: Checkout repository
       uses: actions/checkout@v3

@@ -21,7 +21,7 @@ jobs:
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '3.1.x'  # .NET Core 3.1 SDK supports .NET Standard 2.0 and 2.1
+        dotnet-version: '6.0.x'  # .NET Core 6.0.x SDK supports .NET Standard 2.0 and 2.1
 
     - name: Install dependencies
       run: dotnet restore ./Source/NovusCodeLibrary.sln

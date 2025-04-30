@@ -97,5 +97,12 @@ namespace NovusCodeLibrary.Utils
            return aDateTime.ToString("yyyy-MM-dd");
         }
 
+        public static T? ConvertToNullable<T>(object value) where T : struct
+        {
+            if (value == null || value == DBNull.Value)
+                return null;
+
+            return (T)Convert.ChangeType(value, typeof(T));
+        }
     }
 }

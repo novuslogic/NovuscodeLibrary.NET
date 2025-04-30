@@ -15,8 +15,6 @@ jobs:
     runs-on: ubuntu-24.04 #ubuntu-latest
 
     steps:
-    
-
     - name: Checkout repository
       uses: actions/checkout@v4 #actions/checkout@v3
     
@@ -24,12 +22,6 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '3.1.x'  # .NET Core 3.1 SDK supports .NET Standard 2.0 and 2.1
-
-    - name: Install OpenSSL 1.1 manually
-      run: |
-          sudo apt update
-          wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl1.1/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
-          sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
 
     - name: Install dependencies
       run: dotnet restore ./Source/NovusCodeLibrary.sln

@@ -3,10 +3,27 @@
 <!-- TOC -->
 
 - [Changelog](#changelog)
+    - [Release v0.4.0](#release-v040)
+    - [Release v0.3.0](#release-v030)
     - [Release v0.2.0](#release-v020)
     - [Release v0.1.0](#release-v010)
 
 <!-- /TOC -->
+
+## Release v0.4.0
+
+30/4/2025
+
+* New function ConvertToNullable DateTimeUtils class
+
+## Release v0.3.0
+
+28/12/2024
+
+* Published to Nuget.org
+* Github Action build.yml to compile and publish to Nuget.org
+* New build.ps1 script to set build vserion number for Visual Studio Packages
+
 
 ## Release v0.2.0
 

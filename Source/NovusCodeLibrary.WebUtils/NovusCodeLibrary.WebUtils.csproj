@@ -1,12 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl></RepositoryUrl>
-    <Version>0.3.0</Version>
+    <RepositoryUrl>
+    </RepositoryUrl>
+    <Version>0.4.0</Version>
     <Description>Web Helper Utility Functions</Description>
     <PackageProjectUrl>https://github.com/novuslogic/NovuscodeLibrary.NET</PackageProjectUrl>
   </PropertyGroup>

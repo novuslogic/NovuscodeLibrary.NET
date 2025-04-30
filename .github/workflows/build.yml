@@ -23,6 +23,12 @@ jobs:
       with:
         dotnet-version: '3.1.x'  # .NET Core 3.1 SDK supports .NET Standard 2.0 and 2.1
 
+
+    - name: Install OpenSSL
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libssl-dev
+        
     - name: Install dependencies
       run: dotnet restore ./Source/NovusCodeLibrary.sln
 
